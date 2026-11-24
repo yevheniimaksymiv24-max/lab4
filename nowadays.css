@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-size: 22px;
+}
+
+p.back-link {
+  font-style: italic;
+}
+
+h2 {
+  text-align: center;
+}
+
+ul > li:nth-child(odd) {
+  background-color: lightgray;
+}
+
+ul > li:nth-child(even) {
+  background-color: white;
+}
+
+ol li:nth-child(3):hover,
+ol li:nth-child(5):hover {
+  cursor: pointer;
+}
+
+ol li:nth-child(4) {
+  background-color: lightgreen;
+}
+
+.lists-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 992px) {
+  .lists-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

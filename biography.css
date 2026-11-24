@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-size: 22px;
+}
+
+p.back-link {
+  font-style: italic;
+}
+
+#toc {
+  text-align: center;
+}
+
+ul li a:link,
+ul li a:visited {
+  display: inline-block;
+  width: 180px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  border: 2px solid darkblue;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: magenta;
+  color: white;
+}
+
+ul li a:active {
+  background-color: yellow;
+  color: black;
+}
+
+p.do-zmistu {
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+p.verh {
+  text-transform: uppercase;
+}
+
+.bio-item {
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  font-size: 120%;
+  padding: 15px;
+  border: 1px solid black;
+  flex-grow: 1;
+}
+
+article h2 {
+  font-size: 120%;
+  margin-top: 0;
+}
+
+#base {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+#childhood {
+  background-color: #064e3b;
+  color: #ffffff;
+}
+
+#school {
+  background-color: #701a75;
+  color: #ffffff;
+}
+
+#outside {
+  background-color: #7c2d12;
+  color: #ffffff;
+}
+
+#university {
+  background-color: #312e81;
+  color: #ffffff;
+}
+
+.bio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .bio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .item-university {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 992px) {
+  .bio-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .item-base,
+  .item-childhood,
+  .item-school {
+    grid-column: span 2;
+  }
+
+  .item-outside,
+  .item-university {
+    grid-column: span 3;
+  }
+}
